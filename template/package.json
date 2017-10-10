@@ -1,5 +1,7 @@
 {
-  "name": "doctor-panel",
+  "name": "{{ name }}",
+  "version": "1.0.0",
+  "author": "{{ author }}",
   "scripts": {
     "init": "blade create",
     "start": "blade start",
