@@ -1,8 +1,9 @@
 module.exports = {
     "proxy": {
         "/api": {
-            "target": "http://59.151.16.106:7300/mock/59c9b8333dea15470360b836/urinalysis",
-            pathRewrite: {'^/api' : ''}
+            "target": "http://mock.doctorwork.com/mock/59c9b8333dea15470360b836/urinalysis",
+            pathRewrite: {'^/api' : ''},
+            changeOrigin: true
         }
     },
     // options: mobile|pc|hybrid
