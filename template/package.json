@@ -9,6 +9,6 @@
     "build": "blade build"
   },
   "dependencies": {
-    "blade-scripts": "^1.1.0"
+    "blade-scripts": "^1.1.6"
   }
 }

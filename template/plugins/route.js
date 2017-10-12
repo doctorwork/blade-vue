@@ -5,6 +5,6 @@
 * @Last Modified time: 2017-09-30 09:33:48
 */
 
-export default function (vue) {
-	
+export default function (to, from, next) {
+	next();
 }
