@@ -1,7 +1,5 @@
 <template>
     <div>
-        <top_nav />
-        <router-link to="/mine">mine</router-link>
     </div>
 </template>
 <script>
@@ -15,7 +13,5 @@
     }
 </script>
 <style lang="less" scoped>
-	div {
-		width: 400/@base;
-	}
+	
 </style>
