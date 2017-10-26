@@ -2,14 +2,16 @@ module.exports = {
     "proxy": {
         "/api": {
             "target": "http://mock.doctorwork.com/mock/59c9b8333dea15470360b836/urinalysis",
-            pathRewrite: {'^/api' : ''},
+            pathRewrite: {
+                '^/api': ''
+            },
             changeOrigin: true
         }
     },
     // options: mobile|pc|hybrid
     "type": "mobile",
     "framework": "vue",
-    "title": "医生营销平台",
+    "title": "blade",
     "routes": {
         // 'papers-details': "/:id"
     },
@@ -17,7 +19,7 @@ module.exports = {
     resources: "static/less/base.less",
     plugins: {
         global: '~/plugins/all',
-        // route: '~/plugins/route',
+        route: '~/plugins/route',
         // store: '~/plugins/route',
     },
     router: {
