@@ -1,12 +1,12 @@
 {
-  "name": "{{ name }}",
-  "version": "1.0.0",
-  "author": "{{ author }}",
-  "scripts": {
-    "dev": "blade dev",
-    "build": "blade build"
-  },
-  "dependencies": {
-    "blade-scripts": "^1.1.19"
-  }
+    "name": "{{ name }}",
+    "version": "1.0.0",
+    "author": "{{ author }}",
+    "scripts": {
+        "dev": "blade dev",
+        "build": "blade build"
+    },
+    "dependencies": {
+        "blade-scripts": "^1.1.23"
+    }
 }

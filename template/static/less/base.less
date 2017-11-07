@@ -1,5 +1,57 @@
-@base: 40rem;
+@base: 1px;
 
-.Font-PF () {
-	font-family: PingFangSC-Light;
+/* 颜色定义 */ 
+@primary: #0ACD79;
+@dark: #666;
+@gray: #999;
+@light: #eee;
+
+.Font-PF (@type: Light) {
+	font-family:~'PingFangSC-@{type}', "Microsoft YaHei", "微软雅黑", serif;
+	font-weight: 100;
+}
+
+.Font-SFC (@type: Light) {
+	font-family: SFNSDisplay, ~'PingFangSC-@{type}', "Microsoft YaHei", "微软雅黑", serif;
+	font-weight: 100;
+}
+
+.Font-DIN (@type: Regular) {
+	font-family:~'DINAlternate-@{type}', ~'DINCondensed-@{type}', "Microsoft YaHei", "微软雅黑";
+}
+
+//正方形 覆盖箭头
+.arrow(@direction: 90px, @size: 14px, @stroke: 1px, @bgcolor: #999) {
+  width: @size;
+  height: @size;
+  margin: @size/2;
+  transform: rotate((@direction + 45) * 1deg);
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: @stroke;
+    top:  @stroke;
+    width: @size;
+    height: @size;  
+    background: @bgcolor;
+  }
+}
+
+.clearfix() {
+  zoom:1;
+  &:before {
+    content:' ';
+    display:block;
+  }
+  &:after {
+    content:' ';
+    display: table;
+    clear: both;
+  }
+}
+
+.size(@width, @height) {
+	width: @width;
+	height: @height;
 }

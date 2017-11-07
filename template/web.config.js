@@ -20,8 +20,8 @@ module.exports = {
     plugins: {
         global: '~/plugins/all',
         route: '~/plugins/route',
-        // store: '~/plugins/route',
     },
+    // vuex: '~/plugins/route',
     router: {
         base: "/"
     },
@@ -31,15 +31,6 @@ module.exports = {
      * @type {Object}
      */
     env: {
-        default: {},
-        development: {
-            API_HOST: "http://api-dev.doctorwork.com"
-        },
-        qa: {
-            API_HOST: "http://api-qa.doctorwork.com"
-        },
-        production: {
-            API_HOST: "http://api.doctorwork.com"
-        }
+        default: {}
     }
 }
