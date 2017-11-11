@@ -61,7 +61,7 @@ blade-scripts 对axios 提供了简单封装 并 export 了一些工具方法
 - 添加restful方式 makeResource
 - setup 方法，设置实例defaults 属性
 - createApi 方法，创建单独axios实例
-- 全局错误处理方法  - decorateMaker（不同于，且不见使用默认的interceptor）
+- 全局错误处理方法  - decorateMaker（不同于，且不建议使用默认的interceptor）
 
 ```js
 import {makeGet, makePost, makePut, makeDel} from "@/api";
