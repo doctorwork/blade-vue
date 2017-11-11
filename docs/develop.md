@@ -59,7 +59,18 @@ blade-scripts 对axios 提供了简单封装 并 export 了一些工具方法
 
 - 提供基础的请求构建方法 makeGet, makePost, makePut, makeDelete
 - 添加restful方式 makeResource
-- setup 方法，设置实例defaults 属性
+- setup 方法，设置实例defaults 属性 ,参见axios文档，常见的有baseUrl， header 等
+
+```js
+setup({
+    headers: {
+        'content-type': 'application/json;charset=UTF-8'
+        // 默认使用 application/x-www-form-urlencoded
+    },
+    baseURL
+});
+```
+
 - createApi 方法，创建单独axios实例
 - 全局错误处理方法  - decorateMaker（不同于，且不建议使用默认的interceptor）
 
@@ -94,5 +105,21 @@ const processor = function(res) {
 
 const get = decorateError(makeGet, processor);
 const newtest = get("/api/test");
+
+```
+
+实际项目中，建议将请求统一放在 plugins/api.js中，然后再实例中通过 this.$model 访问，（可修改该方法，避免请求被覆盖）
+
+```js
+
+    // plugins/api.js  该文件已被引入 all.js中
+
+    export default {
+        test: makeGet("/url");
+    }
+
+    // index.vue
+
+    this.$model('test').then(data => this.list = data);
 
 ```
