@@ -33,8 +33,8 @@ setup({
 
 ```
 // 普通的个请求
-const get = makeGet("/api/test");
-api();
+const test = makeGet("/api/test");
+test().then(data => console.log(data));
 
 // 添加 restful 请求, 可根据需要自行覆盖actions, 默认有 get, query, update, create, delete 5个方法，
 
