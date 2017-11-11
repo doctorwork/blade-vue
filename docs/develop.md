@@ -37,7 +37,7 @@ vuex store 暂未形成统一规范，参照官方实践即可
 
 组件和模块分别放在 components 和 modules 文件中，通过监控每个一级目录中的 index.vue 文件，自动引入并注册。
 
-```
+```js
 - components
     - layout
         - index.vue         // 会被引入
@@ -49,8 +49,7 @@ vuex store 暂未形成统一规范，参照官方实践即可
         - m2.vue
         ...
 
-建议交大模块放入统一的文件夹中，然后手动管理，避免过多的导入全局组件中，以及目录混乱。
-
+// 建议交大模块放入统一的文件夹中，然后手动管理，避免过多的导入全局组件中，以及目录混乱。
 
 ```
 
@@ -64,7 +63,7 @@ blade-scripts 对axios 提供了简单封装 并 export 了一些工具方法
 - createApi 方法，创建单独axios实例
 - 全局错误处理方法  - decorateMaker（不同于，且不见使用默认的interceptor）
 
-```
+```js
 import {makeGet, makePost, makePut, makeDel} from "@/api";
 
 // 普通的个请求
