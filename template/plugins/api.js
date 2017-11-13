@@ -1,4 +1,8 @@
-import { makeGet, makePost, setup } from "@/api";
+import {
+    makeGet,
+    makePost,
+    setup
+} from "@/api";
 
 const apis = {
     home: makeGet('/api/test')
@@ -8,7 +12,7 @@ const apis = {
  * 通过接口名称返回请求对象
  * @param {string} entry
  */
-export default function(entry) {
+export default function (entry) {
     if (apis.hasOwnProperty(entry)) {
         return apis[entry]();
     }
