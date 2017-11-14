@@ -1,0 +1,7 @@
+{
+	"name": "blabe-vue",
+	"description": "blabe vue 项目模板",
+	"prettier": {
+		"jsonEnable": false
+	}
+}

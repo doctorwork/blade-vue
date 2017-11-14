@@ -1,12 +1,33 @@
 {
-    "name": "{{ name }}",
-    "version": "1.0.0",
-    "author": "{{ author }}",
-    "scripts": {
+	"name": "{{ name }}",
+	"version": "1.0.0",
+	"author": "{{ author }}",
+	"scripts": {
         "dev": "blade dev",
-        "build": "blade build"
-    },
-    "dependencies": {
-        "blade-scripts": "^1.1.26"
+        {{#lint}}"lint": "eslint --ext .js,.vue .",{{/lint}}
+		"build": "blade build"
+	},
+	"prettier": {
+		"tabWidth": 4,
+		"useTabs": true,
+		"singleQuote": false
+	},
+	"babel": {
+		"env": {
+			"test": {
+				"presets": ["env"]
+			}
+		},
+		"presets": ["env"]
+	},
+	"dependencies": {
+		"blade-scripts": "^1.1.26"
+	},
+	"devDependencies": {
+        {{#lint}}
+        "eslint": "^4.11.0",
+        "eslint-plugin-html": "^3.0.0",
+        "eslint-plugin-vue": "^3.13.1"
+        {{/lint}}
     }
 }

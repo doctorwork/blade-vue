@@ -15,7 +15,7 @@
 </template>
 
 <script>
-    import ModalMixin from "../../utils/ModalMixin";
+    import ModalMixin from "./mixin";
     export default {
     	name: "modal",
     	mixins: [ModalMixin]
