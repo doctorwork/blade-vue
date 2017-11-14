@@ -1,6 +1,6 @@
 ## {{ name }}
 
-文档参见： https://github.com/doctorwork/blade-vue
+文档参见： https://doctorwork.github.io/blade-vue/#/develop
 
 ---
 powered by blade
