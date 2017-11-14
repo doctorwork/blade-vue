@@ -1,6 +1,6 @@
 # 开发
 
-### 路由
+## 路由
 
 相比一般的手动配置router.js 文件，然后写入App中，blade-scripts 通过监控 pages文件夹中的 vue 文件自动生成路由(借鉴了nuxt的实现方式)。
 
@@ -20,20 +20,20 @@
 //    part/a 和 part/b 为独立路由.
 ```
 
-### 插件
+## 插件
 
 插件和第三方组件的引入通过 plugins/all.js 引入即可
 
 vuex store 暂未形成统一规范，参照官方实践即可
 
-#### blade-scripts 内置插件/mixins
+> blade-scripts 内置插件/mixins
 
 - $forward : 封装了 vue-router的push方法，可以修改该方法实现更多自定义逻辑，该方法为推荐实践，不强制要求使用
 - $redirect: 直接的url 跳转，同上。
 
 (更多方法完善中)
 
-### 组件模块
+## 组件模块
 
 组件和模块分别放在 components 和 modules 文件中，通过监控每个一级目录中的 index.vue 文件，自动引入并注册。
 
@@ -53,7 +53,7 @@ vuex store 暂未形成统一规范，参照官方实践即可
 
 ```
 
-### 数据请求
+## 数据请求
 
 blade-scripts 对axios 提供了简单封装 并 export 了一些工具方法
 
