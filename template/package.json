@@ -21,7 +21,7 @@
 		"presets": ["env"]
 	},
 	"dependencies": {
-		"blade-scripts": "^1.1.26"
+		"blade-scripts": "^1.2.0"
 	},
 	"devDependencies": {
         {{#lint}}
