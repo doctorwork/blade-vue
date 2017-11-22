@@ -10,10 +10,12 @@ const apis = {
  * 通过接口名称返回请求对象
  * @param {string} entry
  */
-export default function(entry) {
-	if (apis.hasOwnProperty(entry)) {
-		return apis[entry]();
-	}
+export default function (entry, data, params) {
+    // entry - string, array, function
 
-	throw "Entry not defined";
+    if (apis.hasOwnProperty(entry)) {
+        return apis[entry](data, params);
+    }
+
+    throw "Entry not defined";
 }

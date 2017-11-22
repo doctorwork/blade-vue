@@ -1,7 +1,7 @@
 module.exports = {
     "proxy": {
         "/api": {
-            "target": "http://mock.doctorwork.com/mock/59c9b8333dea15470360b836/urinalysis",
+            "target": "http://mock.example.com",
             pathRewrite: {
                 '^/api': ''
             },
@@ -20,6 +20,21 @@ module.exports = {
     plugins: {
         global: '~/plugins/all',
         route: '~/plugins/route',
+    },
+    build: {
+        postcss: {
+            plugins: {
+                "postcss-cssnext": {
+                    features: {
+                        rem: false
+                    }
+                },
+                "postcss-pxtorem": {
+                    rootValue: 40,
+                    propList: ["*"]
+                }
+            }
+        }
     },
     // vuex: '~/plugins/route',
     router: {
