@@ -5,12 +5,15 @@
 	"scripts": {
         "dev": "blade dev",
         {{#lint}}"lint": "eslint --ext .js,.vue .",{{/lint}}
-		"build": "blade build"
+        "build": "blade build"
 	},
 	"prettier": {
 		"tabWidth": 4,
 		"useTabs": true,
 		"singleQuote": false
+    },
+    "pre-push": {
+		"run": "test"
 	},
 	"babel": {
 		"env": {
