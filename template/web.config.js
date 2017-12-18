@@ -1,13 +1,17 @@
+const port = process.env.BLADE_PORT || 8080
+const proxy = process.env.BLADE_PROXY;
+
 module.exports = {
     "proxy": {
         "/api": {
-            "target": "http://mock.example.com",
+            "target": proxy || "http://mock.example.com",
             pathRewrite: {
                 '^/api': ''
             },
             changeOrigin: true
         }
     },
+    port: port,
     // options: mobile|pc|hybrid
     "type": "mobile",
     "framework": "vue",
